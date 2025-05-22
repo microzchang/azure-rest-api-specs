@@ -288,6 +288,9 @@
           },
           {
             "$ref": "#/parameters/ShareProvisionedBandwidthMibps"
+          },
+          {
+            "$ref": "#/parameters/EnableSmbDirectoryLease"
           }
         ],
         "responses": {
@@ -574,6 +577,11 @@
                 "description": "Returns the current share next allowed provisioned bandwidth downgrade time.",
                 "type": "string",
                 "format": "date-time-rfc1123"
+              },
+              "x-ms-enable-smb-directory-lease": {
+                "x-ms-client-name": "enableSmbDirectoryLease",
+                "description": "Specifies whether granting of new directory leases for directories present in a share is enabled(allowed) or disabled(blocked).  Header is only returned for a SMB Share.",
+                "type": "boolean"
               }
             }
           },
@@ -1598,6 +1606,9 @@
           },
           {
             "$ref": "#/parameters/ShareProvisionedBandwidthMibps"
+          },
+          {
+            "$ref": "#/parameters/EnableSmbDirectoryLease"
           }
         ],
         "responses": {
@@ -7505,6 +7516,9 @@
         "NextAllowedProvisionedBandwidthDowngradeTime": {
           "type": "string",
           "format": "date-time-rfc1123"
+        },
+        "EnableSMBDirectoryLease": {
+          "type": "boolean"
         }
       }
     },
@@ -8760,6 +8774,15 @@
         "name": "FilePropertySemantics",
         "modelAsString": true
       },
+      "x-ms-parameter-location": "method"
+    },
+    "EnableSmbDirectoryLease": {
+      "name": "x-ms-enable-smb-directory-lease",
+      "x-ms-client-name": "enableSmbDirectoryLease",
+      "in": "header",
+      "required": false,
+      "description": "SMB only, default is true.  Specifies whether granting of new directory leases for directories present in a share are to be enabled or disabled. An input of true specifies that granting of new directory leases is to be allowed. An input of false specifies that granting of new directory leases is to be blocked.",
+      "type": "boolean",
       "x-ms-parameter-location": "method"
     }
   }
