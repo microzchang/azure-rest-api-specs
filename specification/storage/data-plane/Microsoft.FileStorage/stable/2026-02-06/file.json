@@ -7517,7 +7517,7 @@
           "type": "string",
           "format": "date-time-rfc1123"
         },
-        "EnableSMBDirectoryLease": {
+        "EnableSmbDirectoryLease": {
           "type": "boolean"
         }
       }
