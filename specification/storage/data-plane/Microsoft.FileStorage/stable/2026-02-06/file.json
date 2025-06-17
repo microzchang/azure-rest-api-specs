@@ -7565,7 +7565,13 @@
         },
         "EncryptionInTransit": {
           "description": "Enable or disable encryption in transit.",
-          "type": "boolean"
+          "type": "object",
+          "properties": {
+            "Required": {
+              "description": "If encryption in transit is required",
+              "type": "boolean"
+            }
+          }
         }
       }
     },
@@ -7578,7 +7584,13 @@
       "properties": {
         "EncryptionInTransit": {
           "description": "Enable or disable encryption in transit.",
-          "type": "boolean"
+          "type": "object",
+          "properties": {
+            "Required": {
+              "description": "If encryption in transit is required",
+              "type": "boolean"
+            }
+          }
         }
       }
     },
